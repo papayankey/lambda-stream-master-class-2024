@@ -19,6 +19,9 @@ public class PredicateCompositionTest {
         }
 
         // FixMe: Create Predicate composition here
+        Predicate<Customer> isValidEmail = customer -> Pattern.matches(emailPattern, customer.email());
+        Predicate<Customer> isValidName = customer -> customer.name().length() >= MINIMUM_NAME_LENGTH;
+        Predicate<Customer> isValidCustomer = isValidEmail.and(isValidName);
 
         boolean result = isValidCustomer.test(new Customer("Mia", "mia@gmail.com"));
 

@@ -14,6 +14,7 @@ public class SupplierTest {
     @Test
     void Supplier01() {
         // FixME: Create Supplier here
+        Supplier<List<String>> supplier = () -> List.of("Ghana", "Nigeria", "Togo");
 
         List<String> result = supplier.get();
 

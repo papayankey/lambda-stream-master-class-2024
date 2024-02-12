@@ -33,8 +33,17 @@ class FunctionTest {
         List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
         // FixMe: Create Function here
+        Function<List<Integer>, List<Integer>> evenNumbers = list -> {
+            List<Integer> output = new ArrayList<>();
+            for (int n : list) {
+                if (n % 2 == 0) {
+                    output.add(n);
+                }
+            }
+            return output;
+        };
 
-       List<Integer> result = evenNumbers.apply(input);
+        List<Integer> result = evenNumbers.apply(input);
 
         assertThat(result).containsExactly(2, 4, 6);
     }

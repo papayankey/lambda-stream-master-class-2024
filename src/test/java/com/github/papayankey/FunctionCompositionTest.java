@@ -15,6 +15,9 @@ public class FunctionCompositionTest {
     @Test
     void FunctionComposition01() {
         // FixMe: Create Function Composition here
+        UnaryOperator<Integer> multiplyByTwo = n -> n * 2;
+        UnaryOperator<Integer> add10 = n -> n + 10;
+        Function<Integer, Integer> multiplyThenAdd = multiplyByTwo.andThen(add10);
 
         int result = multiplyThenAdd.apply(5);
 

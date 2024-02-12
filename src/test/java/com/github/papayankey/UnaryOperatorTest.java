@@ -13,6 +13,7 @@ public class UnaryOperatorTest {
     @Test
     void UnaryOperator01() {
         // FixMe: Create UnaryOperator here
+        UnaryOperator<Integer> square = v -> v * v;
 
         int result = square.apply(2);
 

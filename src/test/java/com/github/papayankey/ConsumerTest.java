@@ -15,8 +15,12 @@ public class ConsumerTest {
         List<String> countries = List.of("Ghana", "Nigeria", "Togo", "South Africa");
 
         // FixME: Create Consumer here
+        Consumer<List<String>> consumer = input -> {
+            for (String country : input) {
+                System.out.println(country);
+            }
+        };
 
-
-        display.accept(countries);
+        consumer.accept(countries);
     }
 }

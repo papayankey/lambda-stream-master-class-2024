@@ -34,6 +34,14 @@ public class PredicateTest {
         List<Integer> input = List.of(1, 3, 5, 2, 4);
 
         // FixMe: Create Predicate here
+        Predicate<List<Integer>> allEven = list -> {
+            for (int n : list) {
+                if (n % 2 == 0) {
+                    return false;
+                }
+            }
+            return true;
+        };
 
         boolean result = allEven.test(input);
 

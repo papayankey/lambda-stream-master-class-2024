@@ -13,6 +13,7 @@ public class BinaryOperatorTest {
     @Test
     void BinaryOperatorTest01() {
         // FixME: Create BinaryOperator here
+        BinaryOperator<Integer> add = (a, b) -> a + b;
 
         int result = add.apply(1, 2);
 
@@ -25,6 +26,7 @@ public class BinaryOperatorTest {
     @Test
     void BinaryOperatorTest02() {
         // FixME: Create BinaryOperator here
+        BinaryOperator<Integer> min = (a, b) -> a < b ? a : b;
 
         int result = min.apply(1, 2);
 

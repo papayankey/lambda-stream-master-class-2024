@@ -18,6 +18,7 @@ public class BiFunctionTest {
         }
 
         // FixME: Create BiFunction here
+        BiFunction<String, Integer, Person> createPerson = (name, age) -> new Person(name, age);
 
         Person result = createPerson.apply("Matilda South", 23);
 
@@ -34,6 +35,13 @@ public class BiFunctionTest {
         List<Integer> numbers = List.of(1, 2, 3);
 
         // FixME: Create BiFunction here
+        BiFunction<List<String>, List<Integer>, List<String>> zip = (c, n) -> {
+            List<String> output = new ArrayList<>();
+            for (int i = 0; i < c.size(); i++) {
+                output.add(c.get(i) + n.get(i));
+            }
+            return output;
+        };
 
         List<String> result = zip.apply(characters, numbers);
 

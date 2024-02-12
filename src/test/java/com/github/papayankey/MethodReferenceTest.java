@@ -13,6 +13,7 @@ public class MethodReferenceTest {
     @Test
     void MethodReference01() {
         // FixME: Create Method Reference here
+        Function<String, Integer> lengthOfString = String::length;
 
         int result = lengthOfString.apply("Java");
 
