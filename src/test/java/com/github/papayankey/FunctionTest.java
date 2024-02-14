@@ -18,7 +18,6 @@ class FunctionTest {
         String input = "java";
 
         // FixMe: Create function here with name `function`
-        Function<String, Integer> function = value -> value.length();
 
         int result = function.apply(input);
 

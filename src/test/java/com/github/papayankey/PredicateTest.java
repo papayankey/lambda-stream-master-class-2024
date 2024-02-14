@@ -18,7 +18,6 @@ public class PredicateTest {
         int input = 19;
 
         // FixMe: Create Predicate here
-        Predicate<Integer> canVote = age -> age >= MINIMUM_AGE;
 
         boolean result = canVote.test(input);
 
