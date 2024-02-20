@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 public class MyFunction {
     public static void main(String[] args) {
-        Function<String, Integer> lengthOfString = String::length;
+        Function<String, Integer> lengthOfString = str -> str.length();
 
         Integer result = lengthOfString.apply("Java");
 

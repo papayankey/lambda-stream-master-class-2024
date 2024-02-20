@@ -5,7 +5,7 @@ import java.util.function.Function;
 public class FunctionComposition {
     public static void main(String[] args) {
         Function<String, String> a1 = name -> "Hello " + name;
-        Function<String, Integer> a2 = String::length;
+        Function<String, Integer> a2 = str -> str.length();
 
         Function<String, Integer> a1Anda2 = msg -> a2.apply(a1.apply(msg));
 
